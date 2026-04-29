@@ -1,18 +1,20 @@
 /****************************
-Name of Task:
+Name of Task: Variables task 2
 ****************************/
 
 //Variables
-let name = "Christian"
-var age = "15"
-var money = "$0"
-var year = "2026"
+let usersName = "Christian"
+var age = 15
+var pocketMoney = 50
+var year = 2026
 
 /****************************
 Main code
 ****************************/
 
-console.log("Hi " + name + "you are " + age + )
+console.log("Hi " + usersName)
+console.log("As of " + year + " you are " + age + " years old.")
+console.log("You have " + pocketMoney + " dollars")
 
 /****************************
 Functions
