@@ -19,16 +19,16 @@ Main code
 
 
 
-output.innerHTML = `Hi ${usersName}, you are ${age} years old.`;
-console.log("As of " + year + " you are " + age + " years old.")
-console.log("You have " + pocketMoney + " dollars")
-console.log("You were born in " + yearBorn)
+output.innerHTML = "<h2>Hi " + usersName + "</h2>"
+output.innerHTML += "<p>As of " + year + " you are " + age + " years old.</p>"
+output.innerHTML += "<p>You have " + pocketMoney + " dollars</p>"
+output.innerHTML += "<p>You were born in " + yearBorn + "</p>"
 age = age + 10
-console.log("In ten years you will be " + age)
+output.innerHTML += "<p>In ten years you will be " + age + "</p>"
 pocketMoney = pocketMoney / 2 
-console.log("You spend half your money, now you have $" + pocketMoney)
+output.innerHTML += "<p>You spend half your money, now you have $" + pocketMoney + "</p>"
 pocketMoney = pocketMoney + 3
-console.log("Then you get $3, now you have $" + pocketMoney)
+output.innerHTML += "<p>Then you get $3, now you have $" + pocketMoney + "</p>"
 
 
 /****************************
