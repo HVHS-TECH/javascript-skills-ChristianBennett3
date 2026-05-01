@@ -1,6 +1,6 @@
-const output = document.getElementById("output");
+const output = document.getElementById("JavaScriptOutput")
 
-/* Read the slides, make a prediction, then uncomment this code.
+
 
 
 var myVar = 0;
@@ -21,4 +21,3 @@ function functionTwo() {
 output.innerHTML += "end: "+myVar+"<br>";
 
 
-*/

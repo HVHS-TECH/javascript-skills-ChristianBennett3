@@ -2,7 +2,7 @@
 Name of Task: Functions with parametersx - Task 7
 ****************************/
 
-console.log("Running task 06")
+console.log("Running task 07")
 
 //Variables
 let usersName = "Christian"
@@ -30,19 +30,23 @@ output.innerHTML += "<p>You spend half your money, now you have $" + pocketMoney
 pocketMoney = pocketMoney + 3
 output.innerHTML += "<p>Then you get $3, now you have $" + pocketMoney + "</p>"
 welcome()
-displayProduct("Chocolate ", 3)
+displayProduct("Chocolate bar", 4)
+displayProduct("Chips", 3)
+displayProduct("Drink", 2.50)
+
 
 
 /****************************
 Functions
 ****************************/
 
+
+
 function welcome(){
     output.innerHTML += "Welcome to the shop"
 }
 
 function displayProduct(_name, _price){
-    output.innerHTML += "<p>" + _name + _price + "</p>"
-    output.innerHTML += "<p></p>"
-    output.innerHTML += "<p></p>"
+    output.innerHTML += "<p>" + _name + ":" + " $" + _price + "</p>"
 }
+
