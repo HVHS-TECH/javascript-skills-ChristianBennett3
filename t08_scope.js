@@ -1,8 +1,5 @@
 const output = document.getElementById("JavaScriptOutput")
 
-
-
-
 var myVar = 0;
 output.innerHTML = "Start: "+myVar+"<br>";
 
