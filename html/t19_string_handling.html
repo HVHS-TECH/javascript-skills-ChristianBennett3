@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>T19-string handling</title>
+  <title>T19 - String Handling</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -16,23 +16,67 @@
 **************************************************************-->
 
 <body>
-  <h1>T19-string handling</h1>
+  <h1>T19 - String Handling</h1>
   <p>Open the console <code>(Ctrl-shift-i)</code> to see the messages.</p>
 
-  <p><br><br><i>Copy your HTML from the last task and keep building.</i><br><br><br><br></p>
+  <form onsubmit="return false;">
+    <label for="formName">Name:</label>
+    <input type="text" name="formName" id="nameField">
+  </form>
+
+  <form onsubmit="return false;">
+    <label for="formAge">Age:</label>
+    <input type="number" name="formAge" id="ageField" min="1" max="120">
+  </form>
+
+  <form onsubmit="return false;">
+    <label for="formPocketMoney">Pocket Money:</label>
+    <input type="text" name="formPocketMoney" id="pocketMoneyField">
+    <br>
+  </form>
+
+  <form onsubmit="return false;">
+    <label for="formLikesChocolate">On a scale of 1-4, how much do you like chocolate?</label>
+    <br>
+    <input type="text" name="formLikesChocolate" id="likesChocolateField">
+    <br>
+    <input type="submit" onclick=getFormInput()>
+  </form>
 
   <div id="spaceForJavaScriptOutput">
+    
+  </div>
+  <br>
+  <form onsubmit="return false;">
+    <label for="formShoppingList">Shopping lsit</label>
+    <br>
+    <input type="text" name="formShoppingList" id="shoppingListField">
+    <br>
+    <input type="submit" value="add" onclick=getShoppingListInput()>
+  </form>
 
-    The output of your script will go here.
+  <div id="shoppingListOutput">
 
   </div>
 
+  <br>
+  <form onsubmit="return false;">
+    <label for="formVerses">How many verses:</label>
+    <br>
+    <input type="text" name="formVerses" id="versesField">
+    <br>
+    <input type="submit" onclick=getVersesInput()>
+  </form>
 
-  <script src="../t19_string_handling.js"></script>
+  <div id="milkVerses">
+    
+  </div>
+  
+  <script src="/t19_string_handling.js"></script>
 
 </body>
 
 </html>
 <!--*************************************************************
-  END OF T19_STRING_HANDLING.HTML
+  END OF T10_INPUT_FROM_HTML.HTML
 **************************************************************-->
