@@ -5,6 +5,7 @@ Name of Task: T21-Objects
 console.log("Running task 21");
 
 //Variables
+var userInfo
 var usersName;
 var pocketMoney;
 const year = 2026;
@@ -21,7 +22,6 @@ Main code
 /****************************
 Functions
 ****************************/
-
 
 
 function welcome(){
@@ -50,6 +50,7 @@ function start(){
     displayProduct("Drink", 2.50);
     canAffordChocolate();
     likesChocolateF();
+    console.log(userInfo)
 }
 
 function getFormInput(){
@@ -57,20 +58,24 @@ function getFormInput(){
     const AGE_FIELD = document.getElementById("ageField");
     const POCKET_MONEY_FIELD = document.getElementById("pocketMoneyField");
     const LIKES_CHOCOLATE_FIELD = document.getElementById("likesChocolateField")
-    ,
     usersName = NAME_FIELD.value;
+    age = Number(AGE_FIELD.value);
+    pocketMoney = Number(POCKET_MONEY_FIELD.value);
+    userInfo = {
+        usersName,
+        age,
+        pocketMoney
+    }
     if (typeof usersName != "string" || usersName == "" || usersName.length < 3){
         alert("Please enter a valid name")
         return
     }
-    age = Number(AGE_FIELD.value);
     if (age > 0 && age < 117){
         console.log("Valid age")
     } else{
         alert("Please enter a valid age")
         return
     }
-    pocketMoney = Number(POCKET_MONEY_FIELD.value);
     start();
 }
 
@@ -113,3 +118,8 @@ function getShoppingListInput(){
     alert("You added '" + item + "' to the list")
     shoppingListOutput.innerHTML += "<li>" + item + "</li>";
 }
+
+function displayUserInfo(){
+    output.innerHTML += "<p><b>User Info:</b><br>" + userInfo.usersName + "<br>" + userInfo.age + "<br>" + userInfo.pocketMoney + "</p>";
+}
+
