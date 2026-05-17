@@ -57,18 +57,35 @@ function getFormInput(){
     const AGE_FIELD = document.getElementById("ageField");
     const POCKET_MONEY_FIELD = document.getElementById("pocketMoneyField");
     const LIKES_CHOCOLATE_FIELD = document.getElementById("likesChocolateField")
+    
+    // Validate name - must be a string and not empty
     usersName = NAME_FIELD.value;
-    if (typeof usersName != "string" || usersName == ""){
-        alert("Please enter a valid name")
+    if (typeof usersName != "string" || usersName == "" || usersName.trim() == ""){
+        alert("Please enter a valid name");
+        return;
     }
+    
+    // Validate age - must be between 1 and 116
     age = Number(AGE_FIELD.value);
-    if (age > 0 && age < 117){
-        console.log("Valid age")
-    } else{
-        alert("Please enter a valid age")
-        return
+    if (!(age > 0 && age < 117) || AGE_FIELD.value == ""){
+        alert("Please enter a valid age");
+        return;
     }
+    
+    // Validate pocket money - must be a positive number
     pocketMoney = Number(POCKET_MONEY_FIELD.value);
+    if (isNaN(pocketMoney) || pocketMoney < 0 || POCKET_MONEY_FIELD.value == ""){
+        alert("Please enter a valid pocket money");
+        return;
+    }
+    
+    // Validate likes chocolate - must be a number between 1 and 4
+    var likesChocolateValue = Number(LIKES_CHOCOLATE_FIELD.value);
+    if (isNaN(likesChocolateValue) || likesChocolateValue < 1 || likesChocolateValue > 4 || LIKES_CHOCOLATE_FIELD.value == ""){
+        alert("Please enter a valid chocolate preference (1-4)");
+        return;
+    }
+    
     start();
 }
 
@@ -96,6 +113,13 @@ function likesChocolateF(){
 function getVersesInput(){
     const VERSES_FIELD = document.getElementById("versesField")
     var verses = Number(VERSES_FIELD.value)
+    
+    // Validate verses - must be a positive number and not empty
+    if (isNaN(verses) || verses < 1 || VERSES_FIELD.value == ""){
+        alert("Please enter a valid verses");
+        return;
+    }
+    
     if (verses != 0){
         outputMilk.innerHTML += "1 bottle of milk on the wall<br>"
     }
@@ -108,6 +132,13 @@ function getVersesInput(){
 function getShoppingListInput(){
     const SHOPPING_LIST_FIELD = document.getElementById("shoppingListField")
     var item = SHOPPING_LIST_FIELD.value;
+    
+    // Validate shopping list item - must not be empty and must be a string
+    if (typeof item != "string" || item == "" || item.trim() == ""){
+        alert("Please enter a valid item");
+        return;
+    }
+    
     alert("You added '" + item + "' to the list")
     shoppingListOutput.innerHTML += "<li>" + item + "</li>";
 }
