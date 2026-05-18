@@ -114,6 +114,8 @@ function getVersesInput(){
         return
     }
 
+    outputMilk.innerHTML = "";
+
     if (verses != 0){
         outputMilk.innerHTML += "1 bottle of milk on the wall<br>"
     }
@@ -121,6 +123,8 @@ function getVersesInput(){
     for (var i = 2; i < verses; i ++){
         outputMilk.innerHTML += i + " bottles of milk on the wall<br>";
     }
+
+    document.getElementById("versesField").value = "";
 }
 
 function getShoppingListInput(){
